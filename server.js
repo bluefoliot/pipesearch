@@ -23,7 +23,9 @@ var server = http.createServer(app);
 app.set('port', 8079);
 app.use(express.static('client'));
 app.use(bodyParser.json());
-server.listen(app.get('port'));
+server.listen(app.get('port'), function() {
+  console.log('Server is accessible at http://localhost:'+app.get('port'));
+});
 
 //init socket
 var io = require('socket.io').listen(server);
