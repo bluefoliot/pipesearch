@@ -20,7 +20,7 @@ compiler.run(function(err, stats) {
 //init app & server
 var app = express();
 var server = http.createServer(app);
-app.set('port', 8079);
+app.set('port', 8080);
 app.use(express.static('client'));
 app.use(bodyParser.json());
 server.listen(app.get('port'), function() {
